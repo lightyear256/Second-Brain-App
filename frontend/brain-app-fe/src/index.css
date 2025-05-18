@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme{
+    --color-lavender-500: #504ab4;
+    --color-lavender-100: #e0e7ff;
+}
