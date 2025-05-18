@@ -46,8 +46,8 @@ export function Signin() {
         setErrors(data.msg.fieldErrors);
       } else if (typeof data?.msg === "string") {
         setErrors({ general: [data.msg] });
+        console.log(errors);
       } else {
-        alert("Something went wrong");
       }
     }
   };
@@ -67,6 +67,7 @@ export function Signin() {
           {errors.password && <p className="text-red-500">{errors.password[0]}</p>}
         </div>
         {msg && <p className="text-green-400">{msg}</p>}
+        {errors.general && <p className="text-red-400">{errors.general[0]}</p>}
         <div className='mt-5'>
           <Buttons id='sigin-in-btn' variant='secondary' size='lg' text="Submit" click={handlesubmit} />
         </div>

@@ -71,7 +71,7 @@ export const usignIn = async (req: Request, res: Response) => {
     const success = await bcrypt.compare(password, user.password);
     if (!success) {
       res.status(403).send({
-        msg: "unauthorised",
+        msg: "Either Email or Password is Incorrect",
       });
       return;
     }
