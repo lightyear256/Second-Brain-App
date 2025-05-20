@@ -1,6 +1,5 @@
 import axios from "axios";
-import { useRecoilState } from "recoil";
-import { DataAtom } from "../stores/atom/Dataatom";
+
 
 export async function fetcher(token:string,setData: (data: any) => void){
   if (token) {
